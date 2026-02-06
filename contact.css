@@ -123,3 +123,49 @@ form button {
     padding: 30px 20px;
   }
 }
+
+/* FORCE OLD LOOK – CONNECT WITH ME */
+
+.mobile-container > h1 {
+  color: #ffffff !important;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.mobile-container > .intro {
+  color: #cfd8dc !important;
+  font-size: 16px;
+  max-width: 760px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* 3 cards top + 3 bottom */
+.contact-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-container > h1 {
+    font-size: 26px;
+  }
+
+  .mobile-container > .intro {
+    font-size: 15px;
+  }
+}
