@@ -1,6 +1,8 @@
 
 
-
+h1.page-title{
+  color: #00ffd5;
+}
 
 
 /* PAGE WRAPPER */
@@ -18,7 +20,7 @@
 .mobile-container h1 {
   font-size: 34px;
   font-weight: 600;
-  color: #00ffd5;          /* pure white like before */
+  color: #00ffd5;        
   margin-bottom: 10px;
 }
 
