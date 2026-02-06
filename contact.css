@@ -169,3 +169,8 @@ form button {
     font-size: 15px;
   }
 }
+
+/* Connect With Me heading – same as other pages */
+.mobile-container > h1 {
+  color: #00ffd5;
+}
