@@ -53,4 +53,21 @@
   justify-content: center;
 }
 
+/* FIX ABOUT LAYOUT – vertical cards like before */
+
+.mobile-container {
+  display: block;
+}
+
+.about-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* force single column always */
+@media (min-width: 769px) {
+  .mobile-container {
+    display: block;
+  }
+}
 
