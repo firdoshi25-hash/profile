@@ -79,9 +79,18 @@ form button:hover {
   transform: scale(1.05);
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 25px;
+.mobile-page {
+  padding: 90px 16px 40px;
+}
+
+.contact-links a {
+  display: block;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  input, textarea {
+    width: 100%;
   }
 }
+
