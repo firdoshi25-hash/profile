@@ -19,13 +19,24 @@
   line-height: 1.9;
 }
 
-/* Mobile responsive */
-@media (max-width: 600px) {
-  .about-section {
-    padding: 25px;
+.mobile-page {
+  min-height: 100vh;
+  padding: 90px 16px 40px;
+}
+
+.mobile-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .mobile-page h1 {
+    font-size: 28px;
   }
 
-  .about-section p {
-    font-size: 1rem;
+  .mobile-page p {
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
+
