@@ -54,17 +54,22 @@
   text-decoration: underline;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .projects-title {
-    font-size: 2.2rem;
+
+.mobile-page {
+  padding: 90px 16px 40px;
+}
+
+.project {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .project h3 {
+    font-size: 22px;
   }
 
-  .project-card {
-    padding: 25px;
-  }
-
-  .project-card h2 {
-    font-size: 1.5rem;
+  .project p {
+    font-size: 15px;
   }
 }
+
