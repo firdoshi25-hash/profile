@@ -40,3 +40,17 @@
   }
 }
 
+.about-section {
+  margin-top: 40px;
+}
+
+.about-section p {
+  max-width: 720px;
+}
+
+.mobile-container {
+  display: flex;
+  justify-content: center;
+}
+
+
