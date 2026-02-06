@@ -94,3 +94,12 @@ form button:hover {
   }
 }
 
+/* Navbar overlap fix + old spacing feel */
+@media (max-width: 768px) {
+  .contact-section {
+    margin-top: 30px;
+    padding: 30px 20px;
+  }
+}
+
+
