@@ -8,35 +8,39 @@
   margin: auto;
 }
 
-/* SIMPLE HEADING (OLD STYLE) */
-.page-title {
-  font-size: 32px;
-  color: #ffffff;
-  margin-bottom: 8px;
+/* ===== HEADING (OLD STYLE FEEL) ===== */
+.page-title,
+.mobile-container h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: #ffffff;          /* pure white like before */
+  margin-bottom: 10px;
 }
 
-.page-intro {
+.page-intro,
+.mobile-container p {
   font-size: 16px;
-  color: #cfd8dc;
-  max-width: 750px;
+  color: #cfd8dc;          /* soft gray like before */
+  max-width: 760px;
   line-height: 1.6;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
-/* CONTACT CARDS */
+/* ===== CONTACT CARDS LAYOUT (3 + 3) ===== */
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);  /* 3 on top, 3 below */
+  gap: 22px;
+  margin-bottom: 60px;
 }
 
 .card {
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 16px;
   text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: #ffffff;
+  background: linear-gradient(135deg, #5f2cff, #2b6bff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card span {
@@ -48,13 +52,14 @@
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* MESSAGE SECTION */
+/* ===== MESSAGE SECTION ===== */
 .contact-section {
   max-width: 900px;
-  margin: 60px auto;
+  margin: auto;
+  margin-bottom: 60px;
   padding: 40px;
   background: rgba(255,255,255,0.08);
   border-radius: 20px;
@@ -77,6 +82,7 @@ form textarea {
   padding: 14px;
   border-radius: 10px;
   border: none;
+  outline: none;
   font-size: 1rem;
 }
 
@@ -93,13 +99,23 @@ form button {
   font-weight: bold;
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .page-title {
+/* ===== RESPONSIVE FIX ===== */
+@media (max-width: 900px) {
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr); /* tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-cards {
+    grid-template-columns: 1fr; /* mobile */
+  }
+
+  .mobile-container h1 {
     font-size: 26px;
   }
 
-  .page-intro {
+  .mobile-container p {
     font-size: 15px;
   }
 
