@@ -1,44 +1,36 @@
 /* PAGE WRAPPER */
 .mobile-page {
-  min-height: 100vh;
   padding: 90px 16px 40px;
 }
 
 .mobile-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
 }
 
-/* SECTION CARD STYLE */
-.contact-section {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 40px;
-  border-radius: 20px;
-  margin-bottom: 50px;
+/* SIMPLE HEADING (OLD STYLE) */
+.page-title {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
-/* HEADINGS */
-.contact-section h1,
-.contact-section h2 {
-  color: #00ffd5;
-  margin-bottom: 15px;
-}
-
-/* TEXT */
-.contact-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 25px;
+.page-intro {
+  font-size: 16px;
+  color: #cfd8dc;
+  max-width: 750px;
+  line-height: 1.6;
+  margin-bottom: 35px;
 }
 
 /* CONTACT CARDS */
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.contact-cards .card {
+.card {
   padding: 20px;
   border-radius: 15px;
   text-decoration: none;
@@ -47,16 +39,30 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.contact-cards .card span {
+.card span {
   display: block;
   margin-top: 8px;
   font-size: 0.9rem;
   opacity: 0.9;
 }
 
-.contact-cards .card:hover {
+.card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* MESSAGE SECTION */
+.contact-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+}
+
+.contact-section h2 {
+  color: #00ffd5;
+  margin-bottom: 20px;
 }
 
 /* FORM */
@@ -69,9 +75,8 @@ form {
 form input,
 form textarea {
   padding: 14px;
-  border-radius: 12px;
+  border-radius: 10px;
   border: none;
-  outline: none;
   font-size: 1rem;
 }
 
@@ -86,24 +91,19 @@ form button {
   cursor: pointer;
   background: linear-gradient(135deg, #00ffd5, #00bfa6);
   font-weight: bold;
-  transition: transform 0.3s;
-}
-
-form button:hover {
-  transform: scale(1.05);
 }
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 30px 20px;
-  }
-
-  .contact-section h1 {
+  .page-title {
     font-size: 26px;
   }
 
-  .contact-section p {
-    font-size: 16px;
+  .page-intro {
+    font-size: 15px;
+  }
+
+  .contact-section {
+    padding: 30px 20px;
   }
 }
