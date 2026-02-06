@@ -145,3 +145,21 @@ body {
 .page-nav a:hover {
   transform: scale(1.1);
 }
+
+/* ===== Mobile Navbar Fix ===== */
+@media (max-width: 768px) {
+
+  .navbar {
+    position: relative;   /* FIX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  body {
+    padding-top: 0;  /* remove extra overlap */
+  }
+
+}
