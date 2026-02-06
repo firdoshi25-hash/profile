@@ -59,18 +59,30 @@
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  .skills {
-    padding: 25px;
+
+/* Mobile friendly spacing */
+.mobile-page {
+  padding: 90px 16px 40px;
+}
+
+/* Content width control */
+.mobile-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Text readable on mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
   }
 
-  .skills-title {
-    font-size: 2rem;
+  h2 {
+    font-size: 22px;
   }
 
-  .skill-card {
-    min-width: 220px;
-    font-size: 0.95rem;
+  .skill-line {
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
