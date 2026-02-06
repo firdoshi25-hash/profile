@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.8;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: #0a0a0a;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+nav h2 {
+  color: #00ffd5;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00ffd5;
+}
+
+/* SECTIONS */
+section {
+  padding: 90px 60px;
+}
+
+/* BUTTON */
+.btn {
+  background: linear-gradient(45deg, #00ffd5, #00c9ff);
+  color: black;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+}
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #ffb703;
+}
+
+/* BODY SPACE FOR NAVBAR */
+body {
+  padding-top: 75px;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NEXT BUTTON */
+.page-nav {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.page-nav a {
+  padding: 14px 35px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #00ffd5, #00bfa6);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.page-nav a:hover {
+  transform: scale(1.1);
+}

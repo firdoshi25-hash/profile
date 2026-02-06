@@ -1,0 +1,74 @@
+.resume {
+  min-height: 100vh;
+}
+
+/* HEADER */
+.resume-header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.resume-header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #00ffd5;
+  object-fit: cover;
+}
+
+.resume-header h1 {
+  font-size: 3rem;
+  color: #00ffd5;
+}
+
+.resume-header h3 {
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+/* SECTIONS */
+.resume-section {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.resume-section h2 {
+  color: #00ffd5;
+  margin-bottom: 15px;
+}
+
+.resume-section ul {
+  padding-left: 20px;
+}
+
+.resume-section li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* DOWNLOAD */
+.resume-download {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .resume-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .resume-header img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .resume-header h1 {
+    font-size: 2.2rem;
+  }
+}
