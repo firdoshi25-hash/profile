@@ -1,0 +1,23 @@
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  width: 180px;
+  border-radius: 50%;
+  border: 5px solid #00ffd5;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 5px solid #00ffd5;
+}

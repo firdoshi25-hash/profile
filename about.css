@@ -1,0 +1,31 @@
+.about-section {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.about-section h1,
+.about-section h2 {
+  color: #00ffd5;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.9;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 25px;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
