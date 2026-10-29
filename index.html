@@ -1,47 +1,508 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Firdoshi | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="home.css">
+    <title>Firdoshi | Portfolio</title>
 
+    <meta name="description" content="Explore Firdoshi's portfolio, skills, projects, and resume.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body>
 
- <nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="project.html">Projects</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <header class="header">
+        <nav class="navbar" id="navbar">
 
-<section class="hero fade-in">
-  <img src="IMG-20251103-WA0005 (2).webp">
-  <h1>Hi, I'm Firdoshi 👋</h1>
-  <h3>Web Developer | BCA Student</h3>
-  <p>
-    I build colorful, interactive and responsive websites.
-    Scroll down and explore my journey.
-  </p>
-  <button class="btn" onclick="location.href='project.html'">View Projects</button>
-</section>
+            <a href="#home" class="logo">Firdoshi<span>.</span></a>
 
-<section class="fade-in">
-  <h2>Why I Love Web Development</h2>
-  <p>
-    Web development lets me turn ideas into reality.
-    I enjoy designing layouts, animations and writing clean code.
-  </p>
-</section>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-<script src="main.js"></script>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-<div class="page-nav">
-  <a href="about.html">⬇ Go to About</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="home section" id="home">
+
+            <div class="home-content">
+                <p class="home-subtitle">HELLO, WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Hi, I'm <span>Firdoshi</span> 👋</h1>
+
+                <h2>Aspiring Full-Stack Developer</h2>
+
+                <p class="home-description">
+                    I am a BCA student passionate about web development.
+                    I enjoy learning new technologies and building
+                    creative, responsive, and user-friendly websites.
+                </p>
+
+                <div class="home-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="home-image">
+                <img
+                    src="assets/images/profile.webp"
+                    alt="Firdoshi's profile photo"
+                >
+            </div>
+
+        </section>
+
+        <section class="about section" id="about">
+
+            <div class="section-heading">
+                <p class="section-subtitle">GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    I am a BCA student interested in frontend and backend
+                    development. I am continuously improving my programming
+                    skills by learning concepts and building practical projects.
+                </p>
+
+                <p>
+                    My goal is to become a skilled developer who can create
+                    useful, accessible, and responsive web applications.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="skills section" id="skills">
+
+            <div class="section-heading">
+                <p class="section-subtitle">WHAT I AM LEARNING</p>
+                <h2>My <span>Skills</span></h2>
+            </div>
+
+            <div class="skills-container">
+
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Creating structured web pages.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Designing responsive and attractive interfaces.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Adding functionality and interactivity.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>React</h3>
+                    <p>Building component-based user interfaces.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Node.js</h3>
+                    <p>Learning server-side development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>MongoDB</h3>
+                    <p>Learning database management.</p>
+                </div>
+<div class="skill-card">
+    <h3>REST API Integration</h3>
+    <p>Connecting frontend applications with backend APIs.</p>
 </div>
+
+<div class="skill-card">
+    <h3>JWT Authentication</h3>
+    <p>Token-based authentication for secure user login.</p>
+</div>
+
+            </div>
+
+        </section>
+
+<section class="projects section" id="projects">
+
+    <div class="section-heading">
+        <p class="section-subtitle">WHAT I HAVE BUILT</p>
+        <h2>My <span>Projects</span></h2>
+        <p class="section-description">
+            Explore my projects, practical work, and ongoing development journey.
+        </p>
+    </div>
+
+    <div class="projects-container">
+
+        <!-- Project 1: ShifoPath India -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Healthcare Technology</span>
+
+                <h3>ShifoPath India</h3>
+
+                <p>
+                    A medical travel assistance platform designed to help
+                    patients with hospital appointments, accommodation,
+                    local transport, and patient support services.
+                </p>
+
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Tailwind CSS</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
+
+                <a
+                    href="https://shifopathindia-4gd0.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View Live Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 2: Phase 6 -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Web Development</span>
+
+                <h3>Phase 6 Project</h3>
+
+                <p>
+                    A web development project showcasing practical
+                    programming skills, application design, and
+                    implementation of web technologies.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a
+                    href="https://phase-6-noxi.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View Live Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 3: Phase 5 -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Web Application</span>
+
+                <h3>Phase 5 Project</h3>
+
+                <p>
+                    A web application built to practise frontend
+                    development, user interface design, and
+                    interactive web technologies.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a
+                    href="https://phase-5-t1gs.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View Live Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 7: CollabSphere -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Full-Stack Development</span>
+
+                <h3>CollabSphere</h3>
+
+                <p>
+                    A collaborative web application combining user
+                    authentication, shared Markdown notes, and
+                    an AI-powered README generator.
+                </p>
+
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>MongoDB</span>
+                    <span>Gemini AI</span>
+                </div>
+
+                <a
+                    href="https://firdoshi25-hash.github.io/CollabSphere/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    aria-label="CollabSphere live demo link to be added"
+                >
+                    View Live Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 8: Smart Agriculture -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Agriculture Technology</span>
+
+                <h3>Fasal Suraksha Guide 🌾</h3>
+
+                <p>
+                    A planned agriculture platform to help farmers
+                    explore crop information, learn modern farming
+                    techniques, access useful weather information,
+                    and discover sustainable farming practices.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Agriculture</span>
+                </div>
+
+                <a
+                    href="https://firdoshi25-hash.github.io/Agriculture/"
+                    class="project-link"
+                    aria-label="Smart Agriculture project live demo link to be added"
+                >
+                 View Live Project ↗
+                </a>
+            </div>
+        </article>
+                <!-- Project 4: eBay Website -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">E-commerce UI</span>
+
+                <h3>eBay Website clone</h3>
+
+                <p>
+                    An eBay-inspired website created to practise
+                    product presentation, page layouts, and
+                    responsive website development.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                </div>
+
+                <a
+                    href="https://firdoshi25-hash.github.io/eBay/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View Live Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 5: Java Ji -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Web Development</span>
+
+                <h3>Quiz app</h3>
+
+                <p>
+                    A web project created to practise website
+                    development and present learning content
+                    through a simple web interface.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a
+                    href="https://firdoshi25-hash.github.io/java-ji/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View Live Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 6: Mini Game -->
+        <article class="project-card">
+            <div class="project-content">
+                <span class="project-category">Interactive Game</span>
+
+                <h3>Mini Game</h3>
+
+                <p>
+                    An interactive browser game designed to practise
+                    JavaScript logic, event handling, and
+                    user interactions.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a
+                    href="https://firdoshi25-hash.github.io/game/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    Play Game ↗
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+        <section class="resume section" id="resume">
+
+            <div class="section-heading">
+                <p class="section-subtitle">MY BACKGROUND</p>
+                <h2>My <span>Resume</span></h2>
+            </div>
+
+            <p class="resume-description">
+                Learn more about my education, technical skills,
+                and project experience.
+            </p>
+
+<a
+    href="assets/documents/Firdoshi-Resume.pdf"
+    class="btn btn-primary"
+    id="resumeDownload"
+    download="Firdoshi-Resume.pdf"
+>
+    Download My Resume
+</a>
+
+
+        </section>
+
+        <section class="contact section" id="contact">
+
+            <div class="section-heading">
+                <p class="section-subtitle">LET'S CONNECT</p>
+                <h2>Contact <span>Me</span></h2>
+            </div>
+
+            <p class="contact-description">
+                Have a project idea or want to connect? Send me a message.
+            </p>
+
+            <form class="contact-form" id="contactForm">
+
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Your Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            © <span id="currentYear"></span> Firdoshi.
+            Built with ❤️ and code.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/resume.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 </html>

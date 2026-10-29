@@ -1,0 +1,35 @@
+
+.resume {
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.resume-description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted-color);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.resume > .btn {
+    min-width: 190px;
+}
+
+@media (max-width: 768px) {
+    .resume-description {
+        font-size: 14px;
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-description {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .resume > .btn {
+        width: 100%;
+    }
+}
