@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Firdoshi | Portfolio</title>
-
-    <meta name="description" content="Explore Firdoshi's portfolio, skills, projects, and resume.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101713">
+    <meta name="description" content="Firdoshi is a BCA student building full-stack web applications and practical AI integrations with React, Node.js, Express, MongoDB, and Gemini.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Firdoshi | Full-Stack &amp; GenAI Developer">
+    <meta property="og:description" content="Selected full-stack projects, practical AI integrations, skills, and background.">
+    <meta property="og:url" content="https://firdoshi25-hash.github.io/profile/">
+    <meta property="og:image" content="https://firdoshi25-hash.github.io/profile/assets/images/profile.webp">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://firdoshi25-hash.github.io/profile/">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <title>Firdoshi | Full-Stack &amp; GenAI Developer</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
@@ -15,14 +22,15 @@
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="header">
-        <nav class="navbar" id="navbar">
-
-            <a href="#home" class="logo">Firdoshi<span>.</span></a>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Firdoshi, home">firdoshi<span>.</span></a>
 
             <button
                 class="menu-toggle"
@@ -40,487 +48,378 @@
             <div class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#resume">Resume</a>
+                <a href="#skills">Skills</a>
+                <a href="#resume">Experience</a>
+                <a href="#ai-work">GenAI</a>
                 <a href="#contact">Contact</a>
+                <a class="nav-resume" href="assets/documents/Firdoshi-Resume.pdf" download="Firdoshi-Resume.pdf">Download CV <span aria-hidden="true">↓</span></a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">
+                    <span aria-hidden="true">☼</span>
+                    <span class="theme-label">Light</span>
+                </button>
             </div>
-
         </nav>
     </header>
 
-    <main>
-
-        <section class="home section" id="home">
-
+    <main id="main">
+        <section class="home section" id="home" aria-labelledby="home-title">
             <div class="home-content">
-                <p class="home-subtitle">HELLO, WELCOME TO MY PORTFOLIO</p>
-
-                <h1>Hi, I'm <span>Firdoshi</span> 👋</h1>
-
-                <h2>Aspiring Full-Stack Developer</h2>
-
+                <p class="home-subtitle"><span class="status-dot" aria-hidden="true"></span> BCA student · Eternal University</p>
+                <h1 id="home-title">Hi, I’m <span>Firdoshi</span> <span class="hero-wave" aria-hidden="true">👋</span></h1>
+                <h2 class="home-role">Full-Stack Developer <span>&amp; GenAI Enthusiast</span></h2>
                 <p class="home-description">
-                    I am a BCA student passionate about web development.
-                    I enjoy learning new technologies and building
-                    creative, responsive, and user-friendly websites.
+                    Building useful digital experiences with code, creativity, and AI. I work on responsive interfaces, full-stack applications, and practical integrations with Google Gemini.
                 </p>
-
                 <div class="home-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        Explore My Projects
-                    </a>
-
-                    <a href="#contact" class="btn btn-secondary">
-                        Contact Me
-                    </a>
+                    <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">→</span></a>
+                    <a href="#contact" class="btn btn-secondary">Let’s connect <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="hero-links" aria-label="Professional profiles">
+                    <a href="https://github.com/firdoshi25-hash" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/firdoshi-%F0%9F%96%87%EF%B8%8F-87213536a" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                    <a href="mailto:firdoshik555@gmail.com">Email <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
 
             <div class="home-image">
                 <img
                     src="assets/images/profile.webp"
-                    alt="Firdoshi's profile photo"
+                    alt="Portrait of Firdoshi"
+                    width="500"
+                    height="500"
+                    fetchpriority="high"
                 >
+                <span class="portrait-ring portrait-ring-1" aria-hidden="true"></span>
+                <span class="portrait-ring portrait-ring-2" aria-hidden="true"></span>
+                <span class="portrait-ring portrait-ring-3" aria-hidden="true"></span>
+                <span class="portrait-ring portrait-ring-4" aria-hidden="true"></span>
             </div>
-
         </section>
 
-        <section class="about section" id="about">
-
-            <div class="section-heading">
-                <p class="section-subtitle">GET TO KNOW ME</p>
-                <h2>About <span>Me</span></h2>
+        <div class="tech-strip" aria-label="Technologies used across my projects">
+            <div class="tech-strip-intro">
+                <span class="tech-spark" aria-hidden="true">✦</span>
+                <span><strong>My Tech Stack</strong><small>Tools I work with</small></span>
             </div>
+            <ul class="tech-list">
+                <li><span class="tech-symbol react-symbol" aria-hidden="true">⚛</span><span>React.js</span></li>
+                <li><span class="tech-symbol node-symbol" aria-hidden="true">⬡</span><span>Node.js</span></li>
+                <li><span class="tech-symbol express-symbol" aria-hidden="true">EX</span><span>Express.js</span></li>
+                <li><span class="tech-symbol mongo-symbol" aria-hidden="true">◖</span><span>MongoDB</span></li>
+                <li><span class="tech-symbol sql-symbol" aria-hidden="true">▤</span><span>SQL</span></li>
+                <li><span class="tech-symbol gemini-symbol" aria-hidden="true">✧</span><span>Gemini API</span></li>
+                <li><span class="tech-symbol git-symbol" aria-hidden="true">⌘</span><span>Git / GitHub</span></li>
+            </ul>
+        </div>
 
+        <section class="overview-grid" aria-label="Portfolio overview">
+            <article class="overview-about">
+                <p class="overview-label"><span aria-hidden="true">✦</span> A BIT ABOUT ME</p>
+                <h2>Curious by nature.<br><span>Builder by practice.</span></h2>
+                <p>BCA student creating responsive web apps and learning full-stack development through real project work.</p>
+                <a class="overview-link" href="#about">More about me <span aria-hidden="true">→</span></a>
+                <span class="overview-decoration" aria-hidden="true">✧</span>
+            </article>
+
+            <article class="overview-projects">
+                <div class="overview-projects-heading">
+                    <p class="overview-label"><span aria-hidden="true">✦</span> FEATURED PROJECTS</p>
+                    <a class="overview-link" href="#projects">View all <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="overview-project-list">
+                    <a class="mini-project" href="#project-shifopath">
+                        <span class="mini-project-art art-health" aria-hidden="true">+</span>
+                        <span><strong>ShifoPath India</strong><small>Healthcare services</small></span>
+                        <span class="mini-project-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="mini-project" href="#project-collabsphere">
+                        <span class="mini-project-art art-collab" aria-hidden="true">{ }</span>
+                        <span><strong>CollabSphere</strong><small>Collaborative workspace</small></span>
+                        <span class="mini-project-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="mini-project" href="#project-sgms">
+                        <span class="mini-project-art art-sgms" aria-hidden="true">SG</span>
+                        <span><strong>SGMS</strong><small>Student Growth &amp; Management</small></span>
+                        <span class="mini-project-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="overview-journey">
+                <p class="overview-label"><span aria-hidden="true">▣</span> MY JOURNEY</p>
+                <ol class="journey-list">
+                    <li><strong>BCA · Eternal University</strong><small>2025 – expected 2028</small></li>
+                    <li><strong>Full-stack projects</strong><small>ShifoPath India · CollabSphere</small></li>
+                    <li><strong>Exploring GenAI</strong><small>Gemini API integrations</small></li>
+                </ol>
+                <a class="overview-link" href="#resume">Resume &amp; education <span aria-hidden="true">→</span></a>
+            </article>
+        </section>
+
+        <section class="about section" id="about" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="section-subtitle">A LITTLE ABOUT ME</p>
+                <h2 id="about-title">Curiosity, turned into <span>working software.</span></h2>
+            </div>
             <div class="about-content">
                 <p>
-                    I am a BCA student interested in frontend and backend
-                    development. I am continuously improving my programming
-                    skills by learning concepts and building practical projects.
+                    I’m studying for a Bachelor of Computer Applications and building my skills through hands-on web projects. My work spans user interfaces, server-side applications, APIs, and database-backed features.
                 </p>
-
                 <p>
-                    My goal is to become a skilled developer who can create
-                    useful, accessible, and responsive web applications.
+                    I’m especially interested in making applications useful and understandable—from a healthcare services platform to collaborative tools and small AI-powered experiments. I’m continuing to grow as a full-stack and GenAI developer by learning through implementation.
                 </p>
             </div>
-
         </section>
 
-        <section class="skills section" id="skills">
-
+        <section class="skills section" id="skills" aria-labelledby="skills-title">
             <div class="section-heading">
-                <p class="section-subtitle">WHAT I AM LEARNING</p>
-                <h2>My <span>Skills</span></h2>
+                <p class="section-subtitle">TOOLS I HAVE WORKED WITH</p>
+                <h2 id="skills-title">Technical <span>toolkit</span></h2>
+                <p class="section-description">A practical snapshot of technologies represented in my projects and resume.</p>
             </div>
-
             <div class="skills-container">
-
-                <div class="skill-card">
-                    <h3>HTML</h3>
-                    <p>Creating structured web pages.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>CSS</h3>
-                    <p>Designing responsive and attractive interfaces.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <p>Adding functionality and interactivity.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>React</h3>
-                    <p>Building component-based user interfaces.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Node.js</h3>
-                    <p>Learning server-side development.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>MongoDB</h3>
-                    <p>Learning database management.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>REST API Integration</h3>
-                    <p>Connecting frontend applications with backend APIs.</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>JWT Authentication</h3>
-                    <p>Token-based authentication for secure user login.</p>
-                </div>
-
+                <article class="skill-card">
+                    <span class="skill-index">01</span>
+                    <h3>Frontend</h3>
+                    <p>HTML5 · CSS3 · JavaScript · React · Responsive design</p>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">02</span>
+                    <h3>Backend & APIs</h3>
+                    <p>Node.js · Express.js · REST APIs · Authentication · JWT</p>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">03</span>
+                    <h3>Data</h3>
+                    <p>MongoDB · Mongoose · SQL · DBMS</p>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">04</span>
+                    <h3>AI integration</h3>
+                    <p>Google Gemini API · Generative AI integration · Prompt-based applications</p>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">05</span>
+                    <h3>Tools & delivery</h3>
+                    <p>Git · GitHub · VS Code · Render · API integration</p>
+                </article>
             </div>
-
         </section>
 
-        <section class="projects section" id="projects">
-
+        <section class="projects section" id="projects" aria-labelledby="projects-title">
             <div class="section-heading">
-                <p class="section-subtitle">WHAT I HAVE BUILT</p>
-                <h2>My <span>Projects</span></h2>
-                <p class="section-description">
-                    Explore my projects, practical work, and ongoing development journey.
-                </p>
+                <p class="section-subtitle">SELECTED WORK</p>
+                <h2 id="projects-title">Projects with a <span>purpose.</span></h2>
+                <p class="section-description">A selection of shipped and in-progress work. Each project is labelled by its current status.</p>
             </div>
 
             <div class="projects-container">
-
-                <!-- Project 1: ShifoPath India -->
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Healthcare Technology</span>
-
-                        <h3>ShifoPath India</h3>
-
-                        <p>
-                            A medical travel assistance platform designed to help
-                            patients with hospital appointments, accommodation,
-                            local transport, and patient support services.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Tailwind CSS</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                <article class="project-card project-featured" id="project-shifopath">
+                    <div class="project-topline">
+                        <span class="project-category">Healthcare services</span>
+                        <span class="project-status">Deployed</span>
+                    </div>
+                    <h3>ShifoPath India</h3>
+                    <p class="project-summary">A healthcare services platform that brings service, doctor, and hospital information together with an enquiry path for patients.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+                    </div>
+                    <details class="project-details">
+                        <summary>Project details</summary>
+                        <div class="project-detail-content">
+                            <p><strong>Problem:</strong> make healthcare service and provider information easier to explore and enquire about.</p>
+                            <p><strong>Contribution:</strong> the resume describes building and deploying the platform and shaping a responsive, accessible presentation for its services.</p>
+                            <p><strong>Implementation:</strong> the public repository includes React pages for services, doctors, hospitals, and enquiries, plus Express, MongoDB/Mongoose, JWT, and admin routes.</p>
                         </div>
-
-                        <a
-                            href="https://shifopathindia-4gd0.onrender.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://shifopathindia-4gd0.onrender.com/" target="_blank" rel="noopener noreferrer">Live project <span aria-hidden="true">↗</span></a>
+                        <a href="https://github.com/firdoshi25-hash/shifopathindia" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
-                <!-- Project 2: Phase 6 -->
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Web Development</span>
-
-                        <h3>Phase 6 Project</h3>
-
-                        <p>
-                            A web development project showcasing practical
-                            programming skills, application design, and
-                            implementation of web technologies.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                <article class="project-card project-featured" id="project-collabsphere">
+                    <div class="project-topline">
+                        <span class="project-category">Collaborative workspace</span>
+                        <span class="project-status">In progress</span>
+                    </div>
+                    <h3>CollabSphere</h3>
+                    <p class="project-summary">A collaborative application combining account access, shared Markdown notes, and an AI-assisted README workflow.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Gemini</span>
+                    </div>
+                    <details class="project-details">
+                        <summary>Project details</summary>
+                        <div class="project-detail-content">
+                            <p><strong>Problem:</strong> bring project collaboration and README drafting into one workspace.</p>
+                            <p><strong>Status:</strong> the resume identifies this application as in progress. The public code includes a Gemini-backed README API route; do not treat every planned module as complete.</p>
+                            <p><strong>AI workflow:</strong> project information is submitted to the backend README route, which requests generated Markdown from Gemini and returns it to the client. The route checks required project fields and whether the server key is configured; generation errors are logged and returned as generic server errors.</p>
                         </div>
-
-                        <a
-                            href="https://phase-6-noxi.onrender.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://phase-7-1.onrender.com/" target="_blank" rel="noopener noreferrer">Live project <span aria-hidden="true">↗</span></a>
+                        <a href="https://github.com/firdoshi25-hash/phase-7" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
-                <!-- Project 3: Phase 5 -->
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Web Application</span>
-
-                        <h3>Phase 5 Project</h3>
-
-                        <p>
-                            A web application built to practise frontend
-                            development, user interface design, and
-                            interactive web technologies.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                <article class="project-card project-featured" id="project-sgms">
+                    <div class="project-topline">
+                        <span class="project-category">Student management</span>
+                        <span class="project-status">Project</span>
+                    </div>
+                    <h3>SGMS</h3>
+                    <p class="project-summary">Student Growth &amp; Management System for goals, tasks, study sessions, attendance, notes, projects, leave requests, and dashboard reports.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+                    </div>
+                    <details class="project-details">
+                        <summary>Project details</summary>
+                        <div class="project-detail-content">
+                            <p><strong>Problem:</strong> help students organize academic activity and give administrators a structured review and reporting workflow.</p>
+                            <p><strong>Implemented features:</strong> account registration and sign-in, dashboard aggregates, goals, tasks, study sessions, attendance, notes, projects, leave requests, notifications, and profile preferences.</p>
+                            <p><strong>Architecture:</strong> a React/Vite client communicates with an Express REST API; MongoDB stores records, JWT-style cookie authentication protects routes, and API access enforces record ownership.</p>
                         </div>
-
-                        <a
-                            href="https://phase-5-t1gs.onrender.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/firdoshi25-hash/SGMS" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
-                <!-- Project 7: CollabSphere -->
-
                 <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Full-Stack Development</span>
-
-                        <h3>CollabSphere</h3>
-
-                        <p>
-                            A collaborative web application combining user
-                            authentication, shared Markdown notes, and
-                            an AI-powered README generator.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>MongoDB</span>
-                            <span>Gemini AI</span>
+                    <div class="project-topline">
+                        <span class="project-category">Generative AI</span>
+                        <span class="project-status">Learning project</span>
+                    </div>
+                    <h3>Ask Gemini</h3>
+                    <p class="project-summary">A small Express application that sends a user's question to Google Gemini and displays the generated response.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <span>JavaScript</span><span>Node.js</span><span>Express</span><span>Google Gemini 2.5 Flash</span>
+                    </div>
+                    <details class="project-details">
+                        <summary>Project details</summary>
+                        <div class="project-detail-content">
+                            <p><strong>Workflow:</strong> browser question → Express <code>POST /api/ask</code> → Gemini 2.5 Flash → response returned to the page.</p>
+                            <p>Requests without a question are rejected; provider failures are logged and returned as a generic server error. The client handles API and connection errors.</p>
+                            <p>This is a general-purpose question-and-answer demo, not a financial application or a source of professional advice.</p>
                         </div>
-
-                        <a
-                            href="https://phase-7-1.onrender.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
-
-                        <a
-                            href="https://github.com/firdoshi25-hash/phase-7"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Source Code ↗
-                        </a>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/firdoshi25-hash/phase-5-Ask-Gemini" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
+            </div>
 
-                <!-- Project 8: Smart Agriculture -->
+            <details class="more-projects">
+                <summary>More projects and practice work</summary>
+                <div class="more-projects-grid">
+                    <a href="https://firdoshi25-hash.github.io/eBay/" target="_blank" rel="noopener noreferrer"><strong>eBay-inspired storefront</strong><span>HTML · CSS · JavaScript</span></a>
+                    <a href="https://firdoshi25-hash.github.io/java-ji/" target="_blank" rel="noopener noreferrer"><strong>Quiz app</strong><span>HTML · CSS · JavaScript</span></a>
+                    <a href="https://firdoshi25-hash.github.io/game/" target="_blank" rel="noopener noreferrer"><strong>Mini Game</strong><span>HTML · CSS · JavaScript</span></a>
+                    <a href="https://firdoshi25-hash.github.io/Agriculture/" target="_blank" rel="noopener noreferrer"><strong>Fasal Suraksha Guide</strong><span>Planned project · HTML · CSS · JavaScript</span></a>
+                    <a href="https://phase-6-noxi.onrender.com/" target="_blank" rel="noopener noreferrer"><strong>Phase 6 project</strong><span>HTML · CSS · JavaScript</span></a>
+                    <a href="https://phase-5-t1gs.onrender.com/" target="_blank" rel="noopener noreferrer"><strong>Phase 5 project</strong><span>Frontend practice</span></a>
+                </div>
+            </details>
+        </section>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Agriculture Technology</span>
-
-                        <h3>Fasal Suraksha Guide 🌾</h3>
-
-                        <p>
-                            A planned agriculture platform to help farmers
-                            explore crop information, learn modern farming
-                            techniques, access useful weather information,
-                            and discover sustainable farming practices.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Agriculture</span>
-                        </div>
-
-                        <a
-                            href="https://firdoshi25-hash.github.io/Agriculture/"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
-                    </div>
+        <section class="ai-work section" id="ai-work" aria-labelledby="ai-title">
+            <div class="section-heading">
+                <p class="section-subtitle">PRACTICAL AI INTEGRATION</p>
+                <h2 id="ai-title">GenAI, connected to <span>real applications.</span></h2>
+                <p class="section-description">Examples from my public Gemini projects—not claims about a finance product.</p>
+            </div>
+            <div class="ai-work-grid">
+                <article class="ai-work-card">
+                    <span class="ai-step">01 / INPUT</span>
+                    <h3>Shape a useful prompt</h3>
+                    <p>Ask Gemini accepts a user question. The README workflow sends structured project information such as name, description, technologies, and features.</p>
                 </article>
-
-                <!-- Project 4: eBay Website -->
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">E-commerce UI</span>
-
-                        <h3>eBay Website clone</h3>
-
-                        <p>
-                            An eBay-inspired website created to practise
-                            product presentation, page layouts, and
-                            responsive website development.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-                        </div>
-
-                        <a
-                            href="https://firdoshi25-hash.github.io/eBay/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
-                    </div>
+                <article class="ai-work-card">
+                    <span class="ai-step">02 / SERVER</span>
+                    <h3>Keep the model call on the backend</h3>
+                    <p>The Express API receives the request and communicates with Google Gemini 2.5 Flash using a server-side environment key. The browser calls the app's API rather than a model endpoint directly.</p>
                 </article>
-
-                <!-- Project 5: Java Ji -->
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Web Development</span>
-
-                        <h3>Quiz app</h3>
-
-                        <p>
-                            A web project created to practise website
-                            development and present learning content
-                            through a simple web interface.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-
-                        <a
-                            href="https://firdoshi25-hash.github.io/java-ji/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View Live Project ↗
-                        </a>
-                    </div>
+                <article class="ai-work-card">
+                    <span class="ai-step">03 / RESPONSE</span>
+                    <h3>Return generated content</h3>
+                    <p>The server returns generated text to the client. The demos validate required input, report configuration or provider failures, and keep API credentials in server-side environment configuration rather than the browser bundle.</p>
                 </article>
+            </div>
+            <p class="ai-disclaimer">AI-generated output can be inaccurate. These projects do not provide certified financial advice or guaranteed investment decisions.</p>
+        </section>
 
-                <!-- Project 6: Mini Game -->
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-category">Interactive Game</span>
-
-                        <h3>Mini Game</h3>
-
-                        <p>
-                            An interactive browser game designed to practise
-                            JavaScript logic, event handling, and
-                            user interactions.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-
-                        <a
-                            href="https://firdoshi25-hash.github.io/game/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            Play Game ↗
-                        </a>
-                    </div>
+        <section class="resume section" id="resume" aria-labelledby="background-title">
+            <div class="section-heading">
+                <p class="section-subtitle">RESUME SNAPSHOT</p>
+                <h2 id="background-title">Education &amp; <span>project experience.</span></h2>
+            </div>
+            <div class="resume-summary">
+                <p class="background-label">PROFESSIONAL SUMMARY</p>
+                <p>BCA student at Eternal University building full-stack applications with React, Node.js, Express.js, and MongoDB. Built and deployed a healthcare-services platform and am developing collaborative software that includes a Gemini-backed README workflow.</p>
+            </div>
+            <div class="background-grid">
+                <article class="background-card">
+                    <p class="background-label">EDUCATION</p>
+                    <h3>Bachelor of Computer Applications</h3>
+                    <p>Eternal University</p>
+                    <p class="background-meta">Started 2025 · Expected 2028</p>
+                    <p class="course-note">Expected year provided by you; official course duration has not been verified.</p>
                 </article>
-
+                <article class="background-card">
+                    <p class="background-label">PROJECT EXPERIENCE</p>
+                    <h3>Full-stack development</h3>
+                    <p>Self-initiated work on ShifoPath India and ongoing development of CollabSphere, documented in my resume.</p>
+                    <a class="text-link" href="#projects">Explore project work <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+            <div class="resume-profile-links" aria-label="Resume contact and profile links">
+                <a href="https://github.com/firdoshi25-hash" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/firdoshi-%F0%9F%96%87%EF%B8%8F-87213536a" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a href="https://firdoshi25-hash.github.io/profile/" target="_blank" rel="noopener noreferrer">Portfolio <span aria-hidden="true">↗</span></a>
+                <a href="mailto:firdoshik555@gmail.com">Email <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="resume-actions">
+                <p class="resume-description">The existing PDF includes contact details, skills, education, and project experience.</p>
+                <a href="assets/documents/Firdoshi-Resume.pdf" class="btn btn-primary" id="resumeDownload" download="Firdoshi-Resume.pdf">Download resume PDF <span aria-hidden="true">↓</span></a>
             </div>
         </section>
 
-        <section class="resume section" id="resume">
-
-            <div class="section-heading">
-                <p class="section-subtitle">MY BACKGROUND</p>
-                <h2>My <span>Resume</span></h2>
+        <section class="contact section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-copy">
+                <p class="section-subtitle">GET IN TOUCH</p>
+                <h2 id="contact-title">Have something <span>in mind?</span></h2>
+                <p>For opportunities, collaboration, or a conversation about my work, send me a message.</p>
+                <a class="contact-email" href="mailto:firdoshik555@gmail.com">firdoshik555@gmail.com <span aria-hidden="true">↗</span></a>
+                <div class="contact-socials">
+                    <a href="https://github.com/firdoshi25-hash" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/firdoshi-%F0%9F%96%87%EF%B8%8F-87213536a" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                </div>
             </div>
-
-            <p class="resume-description">
-                Learn more about my education, technical skills,
-                and project experience.
-            </p>
-
-            <a
-                href="assets/documents/Firdoshi-Resume.pdf"
-                class="btn btn-primary"
-                id="resumeDownload"
-                download="Firdoshi-Resume.pdf"
-            >
-                Download My Resume
-            </a>
-
-        </section>
-
-        <section class="contact section" id="contact">
-
-            <div class="section-heading">
-                <p class="section-subtitle">LET'S CONNECT</p>
-                <h2>Contact <span>Me</span></h2>
-            </div>
-
-            <p class="contact-description">
-                Have a project idea or want to connect? Send me a message.
-            </p>
-
             <form class="contact-form" id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" maxlength="100" placeholder="Your name" required>
 
-                <label for="name">Your Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
 
-                <label for="email">Your Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" maxlength="3000" placeholder="What would you like to discuss?" required></textarea>
 
-                <label for="message">Your Message</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    placeholder="Write your message"
-                    required
-                ></textarea>
-
-                <button type="submit" class="btn btn-primary">
-                    Send Message
-                </button>
-
+                <button type="submit" class="btn btn-primary" id="contactSubmit">Open email draft <span aria-hidden="true">↗</span></button>
+                <p class="form-hint">This static portfolio opens your email app; it does not send or store your message.</p>
+                <p class="form-message" id="formMessage" role="status" aria-live="polite" hidden></p>
             </form>
-
         </section>
-
     </main>
 
     <footer class="footer">
-        <p>
-            © <span id="currentYear"></span> Firdoshi.
-            Built with ❤️ and code.
-        </p>
+        <p>© <span id="currentYear"></span> Firdoshi</p>
+        <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/project.js"></script>
-    <script src="js/resume.js"></script>
     <script src="js/contact.js"></script>
-
 </body>
 </html>

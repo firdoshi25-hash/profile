@@ -1,53 +1,44 @@
-
 const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+const contactSubmit = document.getElementById("contactSubmit");
 
-if (contactForm) {
+if (contactForm && formMessage && contactSubmit) {
     contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-        const messageInput = document.getElementById("message");
+        if (!contactForm.reportValidity()) {
+            return;
+        }
 
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-        const message = messageInput.value.trim();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
         if (!name || !email || !message) {
-            showFormMessage("Please fill in all fields.", "error");
+            formMessage.textContent = "Please enter your name, a valid email, and a message.";
+            formMessage.className = "form-message error";
+            formMessage.hidden = false;
             return;
         }
 
-        if (!emailInput.validity.valid) {
-            showFormMessage("Please enter a valid email address.", "error");
-            return;
-        }
+        const subject = encodeURIComponent(`Portfolio message from ${name}`);
+        const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
 
-        showFormMessage(
-            "Your form has been validated. Message sending is not connected yet.",
-            "success"
-        );
+        formMessage.textContent =
+            "Opening your email app. Your message is not sent until you review and send the draft.";
+        formMessage.className = "form-message";
+        formMessage.hidden = false;
+        contactSubmit.disabled = true;
+        contactSubmit.setAttribute("aria-busy", "true");
 
-        contactForm.reset();
+        window.location.href =
+            `mailto:firdoshik555@gmail.com?subject=${subject}&body=${body}`;
+
+        window.setTimeout(() => {
+            contactSubmit.disabled = false;
+            contactSubmit.removeAttribute("aria-busy");
+            formMessage.textContent =
+                "If your email app did not open, send your message to firdoshik555@gmail.com.";
+        }, 1200);
     });
-}
-
-function showFormMessage(message, type) {
-    let messageElement = document.getElementById("formMessage");
-
-    if (!messageElement) {
-        messageElement = document.createElement("p");
-        messageElement.id = "formMessage";
-        messageElement.setAttribute("role", "status");
-        messageElement.setAttribute("aria-live", "polite");
-
-        const form = document.getElementById("contactForm");
-
-        if (form) {
-            form.appendChild(messageElement);
-        }
-    }
-
-    messageElement.textContent = message;
-    messageElement.className = `form-message ${type}`;
 }
